@@ -14,7 +14,7 @@ Si vous passez par le proxy de l'université, configurer votre Eclipse (Window->
       <id>univ-nantes</id>
       <active>true</active>
       <protocol>http</protocol>
-        <host>proxy.ensinfo.sciences.univ-nantes.prive</host>
+        <host>xxx</host>
 	<port>3128</port>
      </proxy>
     </proxies>
