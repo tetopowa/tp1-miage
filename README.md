@@ -53,54 +53,55 @@ public static void main(String[] args) {
 ```
 Conception :
 
-![Conception](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/bflorat/tp1-miage/master/diag1.puml&ttt=1)
-![Conception](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/bflorat/tp1-miage/master/diag2.puml&ttt=1)
+![diag sequence](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/bflorat/tp1-miage/master/diag1.puml&ttt=1)
+![diag classe](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/bflorat/tp1-miage/master/diag2.puml&ttt=1)
 
-Prévoir une cinquième couche commun pour les éléments communs à toutes les couches comme les exceptions. 
+Prévoir une cinquième couche `commun` pour les éléments communs à toutes les couches comme les exceptions. 
 
-MailSender est une interface, le choix de l'implémentation est fait par l'application en fonction de la valeur du booléen production.
+`MailSender` est une interface, le choix de l'implémentation est fait par l'application en fonction de la valeur du booléen `production`.
 
 # Exercice 3 - Injection de dépendances avec Guice
 _Temps estimé : 20 mins_
 
-Point de synchro : repartir du projet fourni mailreader-ex3-ini
+Point de synchro : repartir du projet fourni `mailreader-ex3-ini`
 
 Guice est le framework d'injection de dépendance en Java de Google. Il est léger et la configuration se fait en java (et non par fichier XML ou par annotations). Ses concurrents en Java sont principalement Spring Core et CDI dans le monde JEE. Ce pattern est également présent dans la plupart des languages, comme dans Symphony en PHP ou AngularJS en JavaScript.
 
-La méthode configure() de la classe MailReaderModule contient la configuration de Guice. C'est ici qu'on associe une interface à la classe contrète qui sera injectée. Exemple :
+La méthode `configure()` de la classe `MailReaderModule` contient la configuration de Guice. C'est ici qu'on associe une interface à la classe contrète qui sera injectée. Exemple :
+```
 bind(MonInterface.class).to(MaClasseConcrete.class)
+```
+Il est bien sûr également possible d'injecter des classes concrètes (comme ici le `MailService`).
 
-Il est bien sûr également possible d'injecter des classes concrètes (comme ici le MailService).
+1) Compléter la méthode `configure()`
+Observer la méthode `ClientMail.main()` : elle charge la configuration et créé l'objet de haut niveau de l'arbre d'injection : un `InterpreteurLigneCommande`.
 
-1) Compléter la méthode configure()
+2) L'objet `InterpreteurLigneCommande` a besoin d'un `MailService`. Lui injecter (injection par constructeur) via l’annotation (standard java) `@Inject`.
 
-Observer la méthode ClientMail.main() : elle charge la configuration et créé l'objet de haut niveau de l'arbre d'injection : un InterpreteurLigneCommande.
+3) Faire de même pour l'injection du `MailSender` dans le `MailService`.
 
-2) L'objet InterpreteurLigneCommande a besoin d'un MailService. Lui injecter (injection par constructeur) via l’annotation (standard java) @Inject.
+Noter l'arbre d'injection que forme les objets injectés depuis  `InterpreteurLigneCommande`.
 
-3) Faire de même pour l'injection du MailSender dans le MailService.
+# Exercice 4 - TU
+_Temps estimé : 30 mins_
 
-Noter l'arbre d'injection que forme les objets injectés depuis  InterpreteurLigneCommande.
-Exercice 4 - TU
-Temps estimé : 30 mins
-
-1) Compléter les tests unitaires ou en écrire de nouveaux dans les test cases MailTest et MailComparatorTest. Enlever les annotations @Ignore s'il y en a.
+1) Compléter les tests unitaires ou en écrire de nouveaux dans les test cases `MailTest` et `MailComparatorTest`. Enlever les annotations `@Ignore` s'il y en a.
 
 2) Exécuter vos tests si besoin (automatique si vous pratiquez le test continu avec infinitest).
 
 # Exercice 5 - BDD avec Cucumber-jvm
-Temps estimé : 40 mins
+_Temps estimé : 40 mins_
 
-Point de synchro : repartir du projet fourni mailreader-ex5-ini
+Point de synchro : repartir du projet fourni `mailreader-ex5-ini`
 
 cucumber-jvm est l'implémentation java de cucumber, un framework de BDD (Behavioral Driven Development) très populaire. Il est existe d'autres : JBehave (l'original, très similaire), Concordion, JGiven ...
 
 Pour les besoins du TP, nous utilisons ici les notions de Scenario Outline, de Data Table et de Transformer permettant l'utilisation de données tabulaires et de formats custom -> extension de cours rapide à prévoir.
 
-1) Compléter la classe MailComparaisonStep
-2) Lancer le test CucumberRunnerTest en junit
-3) Ouvrir dans un navigateur target/cucumber/index.html
-4) Ajouter des cas de test dans la feature trier_mail.feature : faut-il ecrire de nouvelles méthodes de test comme en tests unitaires ?
+1) Compléter la classe `MailComparaisonStep`
+2) Lancer le test `CucumberRunnerTest` en junit
+3) Ouvrir dans un navigateur `target/cucumber/index.html`
+4) Ajouter des cas de test dans la feature `trier_mail.feature` : faut-il ecrire de nouvelles méthodes de test comme en tests unitaires ?
 
 5) optionnel :
 Ecrire un scenario simple au format textuel et les steps correspondants.
