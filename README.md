@@ -32,10 +32,10 @@ __Travailler dans le projet fourni mailreader-ex1-ini__
 1) Réusiner la classe `MailComparator`
 
 Raccourcis clavier à connaître : 
-ALT-SHIFT-S : fonctions Eclipse de génération de sources (ex : constructeurs)
-ALT-SHIFT-T : fonctions de réusinage
-ALT-SHIFT-M : extraction de méthode (sur sélection)
-ALT-SHIFT-R : renommage (sur sélection)
+* ALT-SHIFT-S : fonctions Eclipse de génération de sources (ex : constructeurs)
+* ALT-SHIFT-T : fonctions de réusinage
+* ALT-SHIFT-M : extraction de méthode (sur sélection)
+* ALT-SHIFT-R : renommage (sur sélection)
 
 # Exercice 2 - Découpage en couches
 _Temps estimé : 20 mins_
@@ -46,8 +46,10 @@ Faire en sorte par exemple que divers frontends puisse récupérer les mails. No
 Cette méthode main attend deux arguments : un booleen `production` qui précise si le mail doit vraiment être envoyé (`true`) ou si nous sommes en environnement de recette (`false`). Le second argument est le sujet du mail.
 
 Rappel : exemple de méthode main qui parse un boolean : 
-```public static void main(String[] args) {
-		production = Boolean.parseBoolean(args[0]);
+```
+public static void main(String[] args) {
+   production = Boolean.parseBoolean(args[0]);
+   ...		
 ```
 Conception :
 
