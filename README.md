@@ -53,33 +53,7 @@ public static void main(String[] args) {
 ```
 Conception :
 
-@startuml
-ClientMail -> InterpreteurLigneCommande : nouveauMail(args) 
-InterpreteurLigneCommande -> MailService : envoyerMail(Mail)
-MailService -> MailSender : envoyerMail
-
-@enduml
-
-
-@startuml
-
-class MailService {
- +envoyerMail(Mail mail)
-}
-
-interface MailSender {
- +envoyerMail(Mail mail)
-}
-
-
-SmtpMailSender --|> MailSender
-InMemoryMailSender --|> MailSender
-MailService -> MailSender
-
-
-
-@enduml
-
+![Conception](http://www.plantuml.com/plantuml/proxy?src=https://github.com/bflorat/tp1-miage/blob/master/diags.puml)
 
 Prévoir une cinquième couche commun pour les éléments communs à toutes les couches comme les exceptions. 
 
