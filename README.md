@@ -1,25 +1,24 @@
 # Pré-requis 
-* disposer d'au moins un compte github par binome
-* apporter son portable
-* disposer d'un accès internet (université ou data)
+* Disposer d'au moins un compte github par binome
+* Apporter son portable (les postes de l'université n'ont pas accès au proxy depuis Eclipse). Pas de préférence pour l'OS (Linux, OSX ou Windows).
+* Disposer d'un accès internet (université ou data)
 * JDK 8 ou 9
-*  Eclipse recent (de préférence Oxygen) installé
-* plugins Eclipse à installer : infinitest, natural (chercher "cucumber")
+* Eclipse recent (de préférence Oxygen) installé
+* Plugins Eclipse à installer : infinitest, natural (chercher "cucumber")
 
-Si vous passez par le proxy de l'université, configurer votre Eclipse (Window-> Preferences -> chercher 'proxy") et votre conf maven   :
+Si vous passez par le proxy de l'université, configurer votre Eclipse (Window-> Preferences -> chercher 'proxy") et votre conf maven  `~/.m2/settings.xml` :
 ```
-[~/.m2/settings.xml]
-	<settings>
-		<proxies>
-			<proxy>
-				<id>univ-nantes</id>
-				<active>true</active>
-				<protocol>http</protocol>
-				<host>proxy.ensinfo.sciences.univ-nantes.prive</host>
-				<port>3128</port>
-			</proxy>
-		</proxies>
-	</settings>
+<settings>
+  <proxies>
+    <proxy>
+      <id>univ-nantes</id>
+      <active>true</active>
+      <protocol>http</protocol>
+        <host>proxy.ensinfo.sciences.univ-nantes.prive</host>
+	<port>3128</port>
+     </proxy>
+    </proxies>
+</settings>
 ```
 * Forker sur Github le projet `bflorat/tp1-miage` puis le cloner dans votre workspace
 * Dans le `README.md` de votre projet, mentionner votre nom et celui de votre binome __(ne pas oublier !)__
