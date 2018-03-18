@@ -3,8 +3,8 @@
 * apporter son portable
 * disposer d'un accès internet (université ou data)
 * JDK 8 ou 9
-- Eclipse recent (de préférence Oxygen) installé
-- plugins Eclipse à installer : infinitest, natural (chercher "cucumber")
+*  Eclipse recent (de préférence Oxygen) installé
+* plugins Eclipse à installer : infinitest, natural (chercher "cucumber")
 
 Si vous passez par le proxy de l'université, configurer votre Eclipse (Window-> Preferences -> chercher 'proxy") et votre conf maven   :
 ```
