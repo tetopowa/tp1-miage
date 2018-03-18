@@ -25,30 +25,30 @@ Si vous passez par le proxy de l'université, configurer votre Eclipse (Window->
 * Dans le `README.md` de votre projet, mentionner votre nom et celui de votre binome __(ne pas oublier !)__
 
 # Exercice 1 - Refactoring
+_Temps estimé : 20 mins_
 
-Temps estimé : 20 mins, exemple de solution en annexe A
+__Travailler dans le projet fourni mailreader-ex1-ini__
 
-Travailler dans le projet fourni mailreader-ex1-ini
-
-1) Réusiner la classe MailComparator
+1) Réusiner la classe `MailComparator`
 
 Raccourcis clavier à connaître : 
 ALT-SHIFT-S : fonctions Eclipse de génération de sources (ex : constructeurs)
 ALT-SHIFT-T : fonctions de réusinage
 ALT-SHIFT-M : extraction de méthode (sur sélection)
 ALT-SHIFT-R : renommage (sur sélection)
-Exercice 2 - Découpage en couches
-Temps estimé : 20 mins
+
+# Exercice 2 - Découpage en couches
+_Temps estimé : 20 mins_
 
 1) Réorganiser le code dans les couches standards. 
 
-Faire en sorte par exemple que divers frontends puisse récupérer les mails. Nous aurons dans ce TP un seul frontend : un CLI (ligne de commande) qui sera implémenté sous la forme d'une classe ClientMail avec main(). 
-Cette méthode main attend deux arguments : un booleen nommé production qui précise si le mail doit vraiment être envoyé (true) ou si nous sommes en environnement de recette (false). Le second argument est le sujet du mail.
+Faire en sorte par exemple que divers frontends puisse récupérer les mails. Nous aurons dans ce TP un seul frontend : un CLI (ligne de commande) qui sera implémenté sous la forme d'une classe `ClientMail` avec `main()`. 
+Cette méthode main attend deux arguments : un booleen `production` qui précise si le mail doit vraiment être envoyé (`true`) ou si nous sommes en environnement de recette (`false`). Le second argument est le sujet du mail.
 
-Rappel : exemple de méthode mail qui parse un boolean : 
-public static void main(String[] args) {
+Rappel : exemple de méthode main qui parse un boolean : 
+```public static void main(String[] args) {
 		production = Boolean.parseBoolean(args[0]);
-
+```
 Conception :
 
 @startuml
@@ -79,14 +79,12 @@ MailService -> MailSender
 @enduml
 
 
-
-
 Prévoir une cinquième couche commun pour les éléments communs à toutes les couches comme les exceptions. 
 
 MailSender est une interface, le choix de l'implémentation est fait par l'application en fonction de la valeur du booléen production.
 
-Exercice 3 - Injection de dépendances avec Guice
-Temps estimé : 20 mins
+# Exercice 3 - Injection de dépendances avec Guice
+_Temps estimé : 20 mins_
 
 Point de synchro : repartir du projet fourni mailreader-ex3-ini
 
@@ -113,7 +111,7 @@ Temps estimé : 30 mins
 
 2) Exécuter vos tests si besoin (automatique si vous pratiquez le test continu avec infinitest).
 
-Exercice 5 - BDD avec Cucumber-jvm
+# Exercice 5 - BDD avec Cucumber-jvm
 Temps estimé : 40 mins
 
 Point de synchro : repartir du projet fourni mailreader-ex5-ini
@@ -130,8 +128,6 @@ Pour les besoins du TP, nous utilisons ici les notions de Scenario Outline, de D
 5) optionnel :
 Ecrire un scenario simple au format textuel et les steps correspondants.
 
-
-
-Cleanup
+# Cleanup
 Si vous le désirez, vous pourrez supprimer votre projet github mais pas avant fin juin (noté)
 
