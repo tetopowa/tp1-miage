@@ -16,8 +16,15 @@ public class MailComparatorTest {
 	}
 
 	@Test
-	public final void egauxSiUnDesMailsNul() {
+	public final void egauxSiDeuxMailsNuls() {
 		Mail mail1 = null;
+		Mail mail2 = null;
+		assertThat(comparator.compare(mail1, mail2), is(0));
+	}
+	
+	@Test
+	public final void egauxSiUnDesMailsNuls() {
+		Mail mail1 = new Mail();
 		Mail mail2 = null;
 		assertThat(comparator.compare(mail1, mail2), is(0));
 	}
