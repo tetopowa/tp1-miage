@@ -61,7 +61,7 @@ public class MailComparator implements Comparator<Mail> {
 	}
 
 	private boolean pasLeMemeSujet(Mail mail1, Mail mail2) {
-		return mail1.getSujet() != mail2.getSujet();
+		return !mail1.getSujet().equals(mail2.getSujet());
 	}
 
 }
