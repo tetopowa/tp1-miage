@@ -1,9 +1,9 @@
 @startuml 
-ClientMail -> InterpreteurLigneCommande : nouveauMail(args) InterpreteurLigneCommande -> MailService : envoyerMail(Mail) MailService -> MailSender : envoyerMail
-@enduml
-
-@startuml
+ClientMail -> InterpreteurLigneCommande : nouveauMail(args) 
+InterpreteurLigneCommande -> MailService : envoyerMail(Mail)
+MailService -> MailSender : envoyerMail
 class MailService { +envoyerMail(Mail mail) }
 interface MailSender { +envoyerMail(Mail mail) }
-SmtpMailSender --|> MailSender InMemoryMailSender --|> MailSender MailService -> MailSender
+SmtpMailSender --|> MailSender 
+InMemoryMailSender --|> MailSender MailService -> MailSender
 @enduml
