@@ -1,0 +1,11 @@
+@startuml 
+class MailService { 
+ +envoyerMail(Mail mail) 
+}
+interface MailSender { 
+ +envoyerMail(Mail mail) 
+}
+SmtpMailSender --|> MailSender 
+InMemoryMailSender --|> MailSender 
+MailService -> MailSender
+@enduml
