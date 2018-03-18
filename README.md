@@ -53,7 +53,7 @@ public static void main(String[] args) {
 ```
 Conception :
 
-![Conception](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/bflorat/tp1-miage/master/diags.puml)
+![Conception](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/bflorat/tp1-miage/master/diags.puml&ttt=1)
 
 Prévoir une cinquième couche commun pour les éléments communs à toutes les couches comme les exceptions. 
 
