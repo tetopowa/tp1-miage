@@ -95,7 +95,7 @@ Point de synchro : repartir du projet fourni `mailreader-ex5-ini`
 
 cucumber-jvm est l'implémentation java de cucumber, un framework de BDD (Behavioral Driven Development) très populaire. Il est existe d'autres : JBehave (l'original, très similaire), Concordion, JGiven ...
 
-Pour les besoins du TP, nous utilisons ici les notions de Scenario Outline, de Data Table et de Transformer permettant l'utilisation de données tabulaires et de formats custom -> extension de cours rapide à prévoir.
+Pour les besoins du TP, nous utilisons ici les notions de Scenario Outline, de Data Table et de Transformer permettant l'utilisation de données tabulaires et de formats custom.
 
 1) Compléter la classe `MailComparaisonStep`
 2) Lancer le test `CucumberRunnerTest` en junit
