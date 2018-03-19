@@ -8,11 +8,11 @@ L'utilisateur de mailreader doit pouvoir trier ses mails pour les retrouver plus
 # Les dates sont données au format ISO8601 à la seconde et en UTC.
 
 
-Scenario Outline: comparaison de deux mails
+Scenario Outline: Tri de deux mails
 Given un premier mail avec l'importance "<important1>", le statut "<statut1>", le sujet "<sujet1>" et la date "<date1>"
 Given un second mail avec l'importance "<important2>", le statut "<statut2>", le sujet "<sujet2>" et la date "<date2>"
 When je trie
-Then la comparaison doit retourner "<resu>"
+Then le tri doit retourner "<resu>"
 
 # Les resulats peuvent être : MAIL1_AVANT, MAIL1_APRES, EGAUX
 	
