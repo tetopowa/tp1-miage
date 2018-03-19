@@ -20,7 +20,7 @@ Si vous passez par le proxy de l'université, configurer votre Eclipse (Window->
     </proxies>
 </settings>
 ```
-* Forker sur Github le projet `bflorat/tp1-miage` puis le cloner dans votre workspace
+* Forker sur Github le projet `bflorat/tp1-miage` puis cloner votre dépôt Github dans votre workspace
 * Dans le `README.md` de votre projet, mentionner votre nom et celui de votre binome __(ne pas oublier !)__
 
 # Exercice 1 - Refactoring
