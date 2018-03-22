@@ -53,12 +53,14 @@ public class MailComparaisonStep {
 	@When("^je trie$")
 	public void je_trie() throws Throwable {
 		//TODO
+		//Appel du code
 	}
 
 	@Then("^le test d'égalité doit retourner \"([^\"]*)\"$")
 	public void le_test_d_egalité(String resu) throws Throwable {
 		//TODO
 		//assertThat(...);
+		//3 assertions MAIL1_AVANT, MAIL1_APRES, EGAUX
 	}
 	
 
