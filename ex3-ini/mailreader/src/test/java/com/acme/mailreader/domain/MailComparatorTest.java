@@ -29,9 +29,6 @@ public class MailComparatorTest {
 		assertThat(comparator.compare(mail1, mail2), is(0));
 	}
 	
-	//TODO
-	//Autres tests unitaires
-	
 	
 	
 }
