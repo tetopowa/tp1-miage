@@ -29,6 +29,14 @@ public class MailComparatorTest {
 		assertThat(comparator.compare(mail1, mail2), is(0));
 	}
 	
-	
+	//TODO
+	//Autres tests unitaires
+	@Test
+	public final void testTrierParImportance() {
+		Mail mail1 = new Mail();
+		mail1.setImportant(true);
+		Mail mail2 = new Mail();
+		assertThat(comparator.compare(mail1, mail2), is(mail1));
+	}	
 	
 }
