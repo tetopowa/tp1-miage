@@ -1,4 +1,4 @@
-##Théo LACROIX & Théo MARTY
+## Théo LACROIX & Théo MARTY
 
 # Pré-requis
 * Disposer d'au moins un compte github par binome
