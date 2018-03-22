@@ -36,7 +36,7 @@ public class MailComparatorTest {
 		Mail mail1 = new Mail();
 		mail1.setImportant(true);
 		Mail mail2 = new Mail();
-		assertThat(comparator.compare(mail1, mail2), is(mail1));
+		assertThat(comparator.compare(mail1, mail2), is(-1));
 	}	
 	
 }
